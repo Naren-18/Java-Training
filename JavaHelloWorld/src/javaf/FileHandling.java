@@ -1,12 +1,13 @@
 package javaf;
 import java.io.*;
 public class FileHandling {
-public static void main(String[] args) {
-	fileInputStream();
+public static void main(String[] args) throws IOException {
+	fileOutputStream();
 }
-static void fileInputStream() {
+static void fileInputStream() throws IOException {
 	int i;
 	File myfile=new File("myfile.txt");
+	myfile.createNewFile();
 	try {
 		FileInputStream fis=new FileInputStream(myfile);
 		System.out.println("File opened");
