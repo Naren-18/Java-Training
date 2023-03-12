@@ -18,29 +18,34 @@ public class Phase_1_Project
 	        System.out.println("3.Exit");
 	        System.out.println("Enter Your Choice");
             Scanner sc = new Scanner(System.in);       
-                  int a = sc.nextInt();
-             switch (a) 
-                {
-                case 1:
-                    if (list.isEmpty()) 
-                    {
-                        System.out.println("No files found.");
-                    } else
-                    {
-                    Collections.sort(list);
-		            System.out.println(list);
-                    }
-                    break;
-                case 2: 
-                     list=fileoperations(list);
-                    break;
-                case 3:
-                	System.out.println("Thank You ");
-                    System.exit(1);
-                default:
-                    System.out.println("Invalid Input!! Please enter the valid Input");
-                    break;
-               }
+             int a = sc.nextInt();
+             try {
+	             switch (a) 
+	                {
+	                case 1:
+	                    if (list.isEmpty()) 
+	                    {
+	                        System.out.println("No files found.");
+	                    } else
+	                    {
+	                    Collections.sort(list);
+			            System.out.println(list);
+	                    }
+	                    break;
+	                case 2: 
+	                     list=fileoperations(list);
+	                    break;
+	                case 3:
+	                	System.out.println("Thank You ");
+	                    System.exit(1);
+	                default:
+	                    System.out.println("Invalid Input!! Please enter the valid Input");
+	                    break;
+	               }
+        		}catch(Exception e) {
+        			System.out.println(e.toString());
+        		}
+        			
             }
         }
    
